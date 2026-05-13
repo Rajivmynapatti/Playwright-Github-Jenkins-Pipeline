@@ -9,8 +9,6 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-
-// Test to verify the 'Get started' link navigation
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
