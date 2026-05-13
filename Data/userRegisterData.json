@@ -1,0 +1,15 @@
+{
+"registerURL":"https://rahulshettyacademy.com/client/#/auth/register",
+"loginURL":"https://rahulshettyacademy.com/client/#/auth/login",
+"firstname":"John123",
+"lastname":"Doe",
+"email":"johndoe@grr.la",
+"phone":"1234567890",
+"role":"Student",
+"password":"Password123!",
+"confirmPassword":"Password123!"
+}   
+
+
+
+

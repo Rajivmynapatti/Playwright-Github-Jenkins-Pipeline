@@ -1,0 +1,9 @@
+{
+   
+    "loginURL": "https://rahulshettyacademy.com/client/#/auth/login",
+    "dashboardURL": "https://rahulshettyacademy.com/client/#/dashboard/dash",
+    "email": "johndoe@grr.la",
+    "password": "Password123!",
+    "invalidEmail": "invalid@example.com",
+    "invalidPassword": "invalidpassword"
+}
