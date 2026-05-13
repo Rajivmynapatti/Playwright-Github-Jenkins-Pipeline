@@ -19,5 +19,6 @@ test.describe("Login", () => {
         await page.goto(userData.loginURL);
         await loginPage.login(userData.invalidEmail, userData.invalidPassword);
         await expect(page).toHaveURL(userData.loginURL);
+        console.log("Login failed as expected with invalid credentials");
     });
 });
