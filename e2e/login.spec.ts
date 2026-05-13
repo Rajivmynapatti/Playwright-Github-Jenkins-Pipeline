@@ -11,6 +11,7 @@ test.describe("Login", () => {
         await page.goto(userData.loginURL);
         await loginPage.login(userData.email, userData.password);
         await expect(page).toHaveURL(userData.dashboardURL);
+         console.log("Login success as expected with valid credentials");
     });
 
     // Test to verify that invalid credentials prevent login
