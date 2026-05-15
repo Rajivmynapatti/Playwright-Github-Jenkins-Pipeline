@@ -8,18 +8,20 @@ test.describe("Login", () => {
     // Test to verify successful login with valid credentials
     test("should login with valid credentials", async ({ page }) => {
         const loginPage = new LoginPage(page);  
-        await page.goto(userData.loginURL);
+        await loginPage.navigateTo(userData.loginURL);
         await loginPage.login(userData.email, userData.password);
         await expect(page).toHaveURL(userData.dashboardURL);
         console.log("Login success as expected with valid credentials");
+        await page.screenshot({ path: "screenshots/login-success.png" });
     });
 
     // Test to verify that invalid credentials prevent login
     test("should not login with invalid credentials", async ({ page }) => {
         const loginPage = new LoginPage(page);
-        await page.goto(userData.loginURL);
+        await loginPage.navigateTo(userData.loginURL);
         await loginPage.login(userData.invalidEmail, userData.invalidPassword);
         await expect(page).toHaveURL(userData.loginURL);
         console.log("Login failed as expected with invalid credentials");
+        await page.screenshot({ path: "screenshots/login-failed.png" });
     });
 });

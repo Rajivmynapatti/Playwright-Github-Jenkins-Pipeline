@@ -1,7 +1,7 @@
-import{type Locator, type Page} from "@playwright/test";
+import { Page, Locator} from '@playwright/test';
+import { BasePage } from "./BasePage"; 
 
-export class RegistrationPage {
-    readonly page: Page;
+export class RegistrationPage extends BasePage {
     readonly firstNameInput: Locator;
     readonly lastNameInput: Locator;
     readonly emailInput: Locator;
@@ -16,7 +16,7 @@ export class RegistrationPage {
 
 
     constructor(page: Page) {
-        this.page = page;
+        super(page);
         this.firstNameInput = page.getByPlaceholder("First Name");
         this.lastNameInput = page.getByPlaceholder("Last Name");
         this.emailInput = page.getByPlaceholder("email@example.com");
