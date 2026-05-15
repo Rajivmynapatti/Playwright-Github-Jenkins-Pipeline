@@ -12,7 +12,7 @@ test.describe("Login", () => {
         await loginPage.login(userData.email, userData.password);
         await expect(page).toHaveURL(userData.dashboardURL);
         console.log("Login success as expected with valid credentials");
-        await page.screenshot({ path: "screenshots/login-success.png" });
+        await loginPage.takeScreenshot("login-success");
     });
 
     // Test to verify that invalid credentials prevent login
@@ -22,6 +22,6 @@ test.describe("Login", () => {
         await loginPage.login(userData.invalidEmail, userData.invalidPassword);
         await expect(page).toHaveURL(userData.loginURL);
         console.log("Login failed as expected with invalid credentials");
-        await page.screenshot({ path: "screenshots/login-failed.png" });
+        await loginPage.takeScreenshot("login-failure");
     });
 });
